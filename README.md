@@ -1,4 +1,4 @@
-# annoying-semicolon
+# Annoying Semicolon - An IntelliJ Plugin for semicolon-free Kotlin code
 
 ![Build](https://github.com/antoniusnaumann/annoying-semicolon/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
@@ -6,7 +6,7 @@
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
+- [x] Get familiar with the [template documentation][template].
 - [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
 - [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
 - [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
@@ -14,12 +14,16 @@
 - [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
+## What is this?
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+Ever worked on a Kotlin project with a friend or colleague who codes in C++ or Java most of their time?
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+Then you probably know this: Let them code unsupervised and suddenly, you end up with Kotlin code scattered with useless 
+semicolons on each and every line end. (Yes, IntelliJ has a warning for this - but your otherwise VIM-only friend will not care)
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+You wonder how to avoid this? Look no further, this plugin got you covered! It marks every useless semicolon as an error (and provides a quickfix to remove it), so they really get annoying and therefore desirable to avoid.
+
+(This plugin was made as a demo, maybe talking to your friend first might be a more acceptable way to fix this issue)
 <!-- Plugin description end -->
 
 ## Installation

@@ -1,4 +1,4 @@
-package com.github.antoniusnaumann.annoyingsemicolon
+package dev.antonius.annoyingsemicolon
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

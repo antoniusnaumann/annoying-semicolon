@@ -1,18 +1,22 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.antoniusnaumann.annoyingsemicolon</id>
-    <name>annoying-semicolon</name>
-    <vendor>antoniusnaumann</vendor>
+    <id>dev.antonius.annoyingsemicolon</id>
+    <name>Annoying Semicolon</name>
+    <vendor>Antonius Naumann</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.antoniusnaumann.annoyingsemicolon.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.antoniusnaumann.annoyingsemicolon.services.MyProjectService"/>
-    </extensions>
+        <!--applicationService serviceImplementation="dev.antonius.annoyingsemicolon.services.MyApplicationService"/>
+        <projectService serviceImplementation="dev.antonius.annoyingsemicolon.services.MyProjectService"/-->
 
-    <applicationListeners>
-        <listener class="com.github.antoniusnaumann.annoyingsemicolon.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+        <localInspection language="kotlin"
+                         displayName="Remove unnecessary semicolon"
+                         groupPath="Java"
+                         groupBundle="messages.InspectionsBundle"
+                         groupKey="group.names.probable.bugs"
+                         enabledByDefault="true"
+                         level="ERROR"
+                         implementationClass="dev.antonius.annoyingsemicolon.listeners.AnnoyingSemicolonInspector"/>
+    </extensions>
 </idea-plugin>
